@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>DB1U19</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<!-- http://zetcode.com/db/postgresqlphp/read/ -->
+
+<body  background="https://i.blogs.es/7c854f/1366_2000/original.jpg" text="Orange" link="White" vlink="Red"4>
+
+<?php 
+$host = "localhost"; 
+$user = "db1u19"; 
+ 
+$pass = "mo6l1r9a"; 
+
+$db = $user; 
+
+$con = pg_connect("host=$host dbname=$db user=$user password=$pass")
+	or die ("Could not connect to server\n"); 
+
+
+$rs = pg_query($con, $query) or die("Cannot execute query: $query\n");
+
+
+pg_close($con); 
+?>
+
+<h1 align="center">WELCOME TO FOOTBALL MANAGER</h1>
+<br>
+<br>
+<br>
+<h2 align="center">Here you can find all the information you want <br>about FOOTBALL...</h2>
+<br>
+<h3 align="center"><b>Please select a choice:</b></h3>
+<p><b>
+			<p align="center"><a href="insert.php">1.Insert</a> </p>	
+			<p align="center"><a href="delete.php">2.Delete</a> </p>
+			<p align="center"><a href="csv.php">3.Insert from File</a> </p>
+			<p align="center"><a href="presentation.php">4.Presentation</a> </p>
+			<p align="center"><a href="sqlqueries.php">5.SQL Queries</a> </p>
+			
+
+</body>
+
+</html>
